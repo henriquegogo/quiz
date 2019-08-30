@@ -1,19 +1,16 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setCategories } from '../actions/categories';
 import { getCategories } from '../services/ApiService';
 
 class Categories extends Component {
-
-  state = {
-    categories: []
-  }
-
   componentDidMount() {
-    getCategories().then(categories => this.setState({ categories }));
+    getCategories().then(categories => this.props.dispatch(setCategories(categories)));
   }
 
   render() {
-    const { categories } = this.state;
-    console.log(categories);
+    const { categories } = this.props;
 
     return (
       <Fragment>
@@ -21,7 +18,7 @@ class Categories extends Component {
         {categories.length === 0 && 'Carregando...'}
         <div className='card-group'>
           {categories.map(category =>
-            <a className='card' key={category.id} href={'/categories/' + category.id}>{category.name}</a>
+            <Link className='card' key={category.id} to={'/categories/' + category.id}>{category.name}</Link>
           )}
         </div>
       </Fragment>
@@ -29,4 +26,4 @@ class Categories extends Component {
   }
 }
 
-export default Categories;
+export default connect(({ categories }) => categories)(Categories);
