@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setCategories } from '../actions/categories';
-import { getCategories } from '../services/ApiService';
+import { categories } from '../actions/categories';
 
 class Categories extends Component {
   componentDidMount() {
-    getCategories().then(categories => this.props.dispatch(setCategories(categories)));
+    this.props.dispatch(categories());
   }
 
   render() {
