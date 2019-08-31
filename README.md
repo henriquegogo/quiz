@@ -1,6 +1,6 @@
 # Full react example
 
-A full example of React application with redux, react-router, redux-thunk, axios, jest with enzyme and more.
+A full example of React application with redux, react-router, redux-thunk, sass, axios, enzyme and more.
 
 ## How to run
 
