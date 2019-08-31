@@ -14,7 +14,9 @@ class App extends Component {
         <main>
           <Router>
             <Route path='/' exact render={() => <Categories />} />
-            <Route path='/trivia/:id' render={({ match }) => <Trivia id={match.params.id} />} />
+            <Route path='/trivia/:category' render={({ match }) => (
+              <Trivia category={match.params.category} />
+            )} />
             <Route path='/report' render={() => <Report />} />
           </Router>
         </main>
