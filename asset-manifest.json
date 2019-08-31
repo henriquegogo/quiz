@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://henriquegogo.github.io/react-full-example/static/css/main.d83e1da6.chunk.css",
-    "main.js": "https://henriquegogo.github.io/react-full-example/static/js/main.fa84b8c0.chunk.js",
-    "main.js.map": "https://henriquegogo.github.io/react-full-example/static/js/main.fa84b8c0.chunk.js.map",
+    "main.js": "https://henriquegogo.github.io/react-full-example/static/js/main.9c09675f.chunk.js",
+    "main.js.map": "https://henriquegogo.github.io/react-full-example/static/js/main.9c09675f.chunk.js.map",
     "runtime~main.js": "https://henriquegogo.github.io/react-full-example/static/js/runtime~main.8badb547.js",
     "runtime~main.js.map": "https://henriquegogo.github.io/react-full-example/static/js/runtime~main.8badb547.js.map",
-    "static/js/2.3dd0a847.chunk.js": "https://henriquegogo.github.io/react-full-example/static/js/2.3dd0a847.chunk.js",
-    "static/js/2.3dd0a847.chunk.js.map": "https://henriquegogo.github.io/react-full-example/static/js/2.3dd0a847.chunk.js.map",
+    "static/js/2.d3382a31.chunk.js": "https://henriquegogo.github.io/react-full-example/static/js/2.d3382a31.chunk.js",
+    "static/js/2.d3382a31.chunk.js.map": "https://henriquegogo.github.io/react-full-example/static/js/2.d3382a31.chunk.js.map",
     "index.html": "https://henriquegogo.github.io/react-full-example/index.html",
-    "precache-manifest.210aa9bda235551c60796b136583ea87.js": "https://henriquegogo.github.io/react-full-example/precache-manifest.210aa9bda235551c60796b136583ea87.js",
+    "precache-manifest.11ce2592acba72b11d3cb25ed1ec0896.js": "https://henriquegogo.github.io/react-full-example/precache-manifest.11ce2592acba72b11d3cb25ed1ec0896.js",
     "service-worker.js": "https://henriquegogo.github.io/react-full-example/service-worker.js",
     "static/css/main.d83e1da6.chunk.css.map": "https://henriquegogo.github.io/react-full-example/static/css/main.d83e1da6.chunk.css.map"
   }
