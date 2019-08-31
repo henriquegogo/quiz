@@ -1,3 +1,7 @@
+$medium-screen: 768px;
+$small-screen: 576px;
+$smaller-screen: 375px;
+
 main {
   margin: 0 auto;
   padding: 10px;
@@ -9,6 +13,88 @@ main {
     font-size: 44px;
     font-weight: normal;
     line-height: 56px;
+  }
+
+  h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
+
+section {
+  padding: 40px;
+  font-weight: 300;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E6;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 4px rgba(52, 60, 88, 0.4);
+  border-radius: 8px;
+
+  h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+}
+
+.answers {
+  margin: 30px 0 0;
+  width: 100%;
+
+  label {
+    span {
+      display: block;
+      margin: 16px 0;
+      padding: 16px;
+      cursor: pointer;
+      background: #FFFFFF;
+      min-height: 60px;
+      border: 1px solid #C9CCCF;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 2px rgba(52, 60, 88, 0.4);
+      border-radius: 8px;
+    }
+  }
+
+  input[type='radio'] {
+    display: none;
+
+    &:checked + span {
+      border: 3px solid #0467DB;
+      box-shadow: 0px 1px 2px rgba(52, 60, 88, 0.4);
+    }
+  }
+
+  button[type='submit'] {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 24px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    border-radius: 8px;
+    background: #0467DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+
+    &[disabled] {
+      cursor: default;
+      background: #C9CCCF;
+    }
+
+    @media (max-width: $medium-screen) {
+      width: 100%;
+    }
   }
 }
 
@@ -33,10 +119,8 @@ main {
     box-shadow: 0px 1px 4px rgba(52, 60, 88, 0.4);
     border-radius: 8px;
   }
-}
 
-@media (max-width: 576px) {
-  .card-group {
+  @media (max-width: $small-screen) {
     margin: -8px;
 
     .card {
@@ -44,12 +128,11 @@ main {
       width: calc(33% -  50px);
     }
   }
-}
 
-@media (max-width: 375px) {
-  .card-group {
+  @media (max-width: $smaller-screen) {
     .card {
       width: calc(50% -  50px);
     }
   }
 }
+

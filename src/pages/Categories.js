@@ -17,7 +17,7 @@ class Categories extends Component {
         {categories.length === 0 && 'Carregando...'}
         <div className='card-group'>
           {categories.map(category =>
-            <Link className='card' key={category.id} to={'/categories/' + category.id}>{category.name}</Link>
+            <Link className='card' key={category.id} to={'/trivia/' + category.id}>{category.name}</Link>
           )}
         </div>
       </Fragment>
