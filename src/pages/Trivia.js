@@ -39,6 +39,7 @@ class Trivia extends Component {
   }
 
   next = (e) => {
+    e.preventDefault();
     const { question_index } = this.state;
     const { answers } = this.props;
 
@@ -51,7 +52,7 @@ class Trivia extends Component {
       });
     }
     else {
-      console.log('acabou');
+      console.log('The end');
     }
   }
 
@@ -66,8 +67,6 @@ class Trivia extends Component {
   render() {
     const { selected_answer, question_index, correct } = this.state;
     const question = this.props.questions[question_index] || {};
-
-    console.log(this.props);
 
     return !question.question ? 'Carregando...' : (
       <Fragment>
