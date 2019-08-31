@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import categories from './categories';
-import question from './question';
+import questions from './questions';
 
 export default combineReducers({
   categories,
-  question
+  questions
 });
