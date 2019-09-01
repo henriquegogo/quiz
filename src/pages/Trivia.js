@@ -6,13 +6,17 @@ import Level from '../components/Level'
 import Modal from '../components/Modal'
 
 const MAX_QUESTIONS = 10;
+const EASY = 'easy';
+const MEDIUM = 'medium';
+const HARD = 'hard';
 
 class Trivia extends Component {
 
   state = {
     selected_answer: null,
     question_index: 0,
-    correct: null
+    correct: null,
+    filter: MEDIUM
   }
 
   selectAnswer = (e) => {
@@ -48,12 +52,42 @@ class Trivia extends Component {
       this.setState({
         selected_answer: null,
         question_index: question_index + 1,
-        correct: null
+        correct: null,
+        filter: this.calcFilter()
       });
     }
     else {
       console.log('The end');
     }
+  }
+
+  calcFilter() {
+    const { answers } = this.props;
+    let next_filter = this.state.filter;
+
+    if (answers.length > 1) {
+      const last = answers[answers.length-1];
+      const nexttolast = answers[answers.length-2];
+
+      if (last.correct === true && nexttolast.correct === true) {
+        if (last.difficulty === EASY && nexttolast.difficulty === EASY) {
+          next_filter = MEDIUM;
+        }
+        else if (last.difficulty === MEDIUM && nexttolast.difficulty === MEDIUM) {
+          next_filter = HARD;
+        }
+      }
+      else if (last.correct === false && nexttolast.correct === false) {
+        if (last.difficulty === HARD && nexttolast.difficulty === HARD) {
+          next_filter = MEDIUM;
+        }
+        else if (last.difficulty === MEDIUM && nexttolast.difficulty === MEDIUM) {
+          next_filter = EASY;
+        }
+      }
+    }
+
+    return next_filter;
   }
 
   componentDidMount() {
@@ -65,8 +99,9 @@ class Trivia extends Component {
   }
 
   render() {
-    const { selected_answer, question_index, correct } = this.state;
-    const question = this.props.questions[question_index] || {};
+    const { selected_answer, question_index, correct, filter } = this.state;
+    const { questions } = this.props;
+    const question = questions.filter(q => q.difficulty === filter)[question_index] || {};
 
     return !question.question ? 'Carregando...' : (
       <Fragment>
