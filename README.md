@@ -1,4 +1,4 @@
-# Full react example
+# Quiz
 
 A full example of React application with redux, react-router, redux-thunk, sass, axios, enzyme and more.
 
@@ -20,7 +20,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Online example
 
-[https://henriquegogo.github.io/react-full-example](https://henriquegogo.github.io/react-full-example)
+[https://henriquegogo.github.io/quiz](https://henriquegogo.github.io/quiz)
 
 ## License
 
