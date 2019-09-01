@@ -103,13 +103,13 @@ class Trivia extends Component {
     const { questions } = this.props;
     const question = questions.filter(q => q.difficulty === filter)[question_index] || {};
 
-    return !question.question ? 'Carregando...' : (
+    return !question.question ? 'Loading...' : (
       <Fragment>
-        <a href='#close' onClick={this.close}><i>ⓧ</i> Fechar</a>
+        <a href='#close' onClick={this.close}><i>ⓧ</i> Close</a>
         <h2>{question.category}</h2>
         <section>
           <Level difficulty={question.difficulty} />
-          <h3>Questão {question_index + 1}</h3>
+          <h3>Question {question_index + 1}</h3>
           {/* Needs to use dangerouslySetInnerHTML because api returns some HTML encoded text */}
           <p dangerouslySetInnerHTML={{ __html: question.question }} />
           <form className='answers' ref={this.form = createRef()}

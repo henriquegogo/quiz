@@ -4,9 +4,9 @@ import './Level.scss';
 class Level extends Component {
 
   levels = {
-    easy: { stars: '★☆☆', text: 'Fácil' },
-    medium: { stars: '★★☆', text: 'Médio' },
-    hard: { stars: '★★★', text: 'Difícil' },
+    easy: { stars: '★☆☆', text: 'Easy' },
+    medium: { stars: '★★☆', text: 'Medium' },
+    hard: { stars: '★★★', text: 'Hard' },
   }
 
   render() {
