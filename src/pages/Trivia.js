@@ -57,7 +57,7 @@ class Trivia extends Component {
       });
     }
     else {
-      console.log('The end');
+      this.props.history.push('/report');
     }
   }
 
