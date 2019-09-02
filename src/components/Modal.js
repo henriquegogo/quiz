@@ -8,7 +8,7 @@ function Modal({ correct, next }) {
       <div className={'modal ' + (!correct && 'red')}>
         <i className='modal-icon' />
         <h2>{correct ? 'You got it right!' : 'Wrong answer!'}</h2>
-        <button onClick={next} autoFocus>Next <i>→</i></button>
+        <button className='modal-button' onClick={next} autoFocus>Next <i>→</i></button>
       </div>
     </Fragment>
   );

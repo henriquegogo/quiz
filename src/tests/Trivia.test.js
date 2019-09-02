@@ -8,14 +8,9 @@ describe('Trivia', () => {
   beforeEach(() => {
     questions = [
       { "category": "General Knowledge", "type": "multiple", "difficulty": "medium",
-        "question": "Which language is NOT Indo-European?",
-        "correct_answer": "Hungarian", "incorrect_answers": ["Russian","Greek","Latvian"],
-        "options": ["Hungarian","Russian","Greek","Latvian"]
-      },
-      { "category": "General Knowledge", "type": "multiple", "difficulty": "medium",
-        "question": "What character was once considered to be the 27th letter of the alphabet?",
-        "correct_answer": "Ampersand", "incorrect_answers":["Interrobang","Tilde","Pilcrow"],
-        "options": ["Ampersand","Interrobang","Tilde","Pilcrow"]
+        "question": "What's the answer?",
+        "correct_answer": "Correct answer", "incorrect_answers":["Incorrect 1","Incorrect 2","Incorrect 3"],
+        "options": ["Correct answer","Incorrect 1","Incorrect 2","Incorrect 3"]
       }
     ];
     answers = [];
@@ -43,5 +38,47 @@ describe('Trivia', () => {
 
   it('has a "Send answer" button', () => {
     expect(component.find('button[type="submit"]').text()).toBe('Send answer');
+  });
+
+  it('if has 2 medium hits, upgrade the difficulty', () => {
+    expect(component.instance().calcFilter()).toBe('medium');
+
+    component.setProps({ answers: [{difficulty:'medium',correct:true}] })
+    expect(component.instance().calcFilter()).toBe('medium');
+
+    component.setProps({ answers: [{difficulty:'medium',correct:true},{difficulty:'medium',correct:true}] })
+    expect(component.instance().calcFilter()).toBe('hard');
+  });
+
+  it('if has 2 medium mistakes, downgrade the difficulty', () => {
+    expect(component.instance().calcFilter()).toBe('medium');
+
+    component.setProps({ answers: [{difficulty:'medium',correct:false}] })
+    expect(component.instance().calcFilter()).toBe('medium');
+
+    component.setProps({ answers: [{difficulty:'medium',correct:false},{difficulty:'medium',correct:false}] })
+    expect(component.instance().calcFilter()).toBe('easy');
+  });
+
+  it('if has 2 easy hits, upgrade the difficulty', () => {
+    component.setState({ filter: 'easy' });
+    expect(component.instance().calcFilter()).toBe('easy');
+
+    component.setProps({ answers: [{difficulty:'easy',correct:true}] })
+    expect(component.instance().calcFilter()).toBe('easy');
+
+    component.setProps({ answers: [{difficulty:'easy',correct:true},{difficulty:'easy',correct:true}] })
+    expect(component.instance().calcFilter()).toBe('medium');
+  });
+
+  it('if has 2 hard mistakes, downgrade the difficulty', () => {
+    component.setState({ filter: 'hard' });
+    expect(component.instance().calcFilter()).toBe('hard');
+
+    component.setProps({ answers: [{difficulty:'hard',correct:false}] })
+    expect(component.instance().calcFilter()).toBe('hard');
+
+    component.setProps({ answers: [{difficulty:'hard',correct:false},{difficulty:'hard',correct:false}] })
+    expect(component.instance().calcFilter()).toBe('medium');
   });
 });
