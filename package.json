@@ -16,6 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "git checkout master && PUBLIC_URL=https://henriquegogo.github.io/quiz yarn build && git checkout gh-pages && mv build/* . && rmdir build && git commit -am 'Deploy' && git push && git checkout master",
     "test": "react-scripts test"
   },
   "eslintConfig": {
