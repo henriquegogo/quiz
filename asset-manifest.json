@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://henriquegogo.github.io/quiz/static/css/main.16759802.chunk.css",
-    "main.js": "https://henriquegogo.github.io/quiz/static/js/main.f0e165d1.chunk.js",
-    "main.js.map": "https://henriquegogo.github.io/quiz/static/js/main.f0e165d1.chunk.js.map",
+    "main.css": "https://henriquegogo.github.io/quiz/static/css/main.bdc8d630.chunk.css",
+    "main.js": "https://henriquegogo.github.io/quiz/static/js/main.20b68173.chunk.js",
+    "main.js.map": "https://henriquegogo.github.io/quiz/static/js/main.20b68173.chunk.js.map",
     "runtime~main.js": "https://henriquegogo.github.io/quiz/static/js/runtime~main.4f52fe40.js",
     "runtime~main.js.map": "https://henriquegogo.github.io/quiz/static/js/runtime~main.4f52fe40.js.map",
     "static/js/2.173bd393.chunk.js": "https://henriquegogo.github.io/quiz/static/js/2.173bd393.chunk.js",
     "static/js/2.173bd393.chunk.js.map": "https://henriquegogo.github.io/quiz/static/js/2.173bd393.chunk.js.map",
     "index.html": "https://henriquegogo.github.io/quiz/index.html",
-    "precache-manifest.4bfc8cfedcc41d8b761ab35c73f2deb9.js": "https://henriquegogo.github.io/quiz/precache-manifest.4bfc8cfedcc41d8b761ab35c73f2deb9.js",
+    "precache-manifest.9ef84c7637221521bb17015e282ae763.js": "https://henriquegogo.github.io/quiz/precache-manifest.9ef84c7637221521bb17015e282ae763.js",
     "service-worker.js": "https://henriquegogo.github.io/quiz/service-worker.js",
-    "static/css/main.16759802.chunk.css.map": "https://henriquegogo.github.io/quiz/static/css/main.16759802.chunk.css.map"
+    "static/css/main.bdc8d630.chunk.css.map": "https://henriquegogo.github.io/quiz/static/css/main.bdc8d630.chunk.css.map"
   }
 }
