@@ -1,6 +1,6 @@
 {
-  "short_name": "Questions",
-  "name": "Study questions",
+  "short_name": "Quiz",
+  "name": "Quiz",
   "icons": [
     {
       "src": "favicon.ico",

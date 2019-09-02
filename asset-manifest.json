@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://henriquegogo.github.io/react-full-example/static/css/main.1634d757.chunk.css",
-    "main.js": "https://henriquegogo.github.io/react-full-example/static/js/main.085647a5.chunk.js",
-    "main.js.map": "https://henriquegogo.github.io/react-full-example/static/js/main.085647a5.chunk.js.map",
-    "runtime~main.js": "https://henriquegogo.github.io/react-full-example/static/js/runtime~main.8badb547.js",
-    "runtime~main.js.map": "https://henriquegogo.github.io/react-full-example/static/js/runtime~main.8badb547.js.map",
-    "static/js/2.0e6c7524.chunk.js": "https://henriquegogo.github.io/react-full-example/static/js/2.0e6c7524.chunk.js",
-    "static/js/2.0e6c7524.chunk.js.map": "https://henriquegogo.github.io/react-full-example/static/js/2.0e6c7524.chunk.js.map",
-    "index.html": "https://henriquegogo.github.io/react-full-example/index.html",
-    "precache-manifest.bf7e71e7d80a9135f6fa817f35694a9d.js": "https://henriquegogo.github.io/react-full-example/precache-manifest.bf7e71e7d80a9135f6fa817f35694a9d.js",
-    "service-worker.js": "https://henriquegogo.github.io/react-full-example/service-worker.js",
-    "static/css/main.1634d757.chunk.css.map": "https://henriquegogo.github.io/react-full-example/static/css/main.1634d757.chunk.css.map"
+    "main.css": "https://henriquegogo.github.io/quiz/static/css/main.16759802.chunk.css",
+    "main.js": "https://henriquegogo.github.io/quiz/static/js/main.f0e165d1.chunk.js",
+    "main.js.map": "https://henriquegogo.github.io/quiz/static/js/main.f0e165d1.chunk.js.map",
+    "runtime~main.js": "https://henriquegogo.github.io/quiz/static/js/runtime~main.4f52fe40.js",
+    "runtime~main.js.map": "https://henriquegogo.github.io/quiz/static/js/runtime~main.4f52fe40.js.map",
+    "static/js/2.173bd393.chunk.js": "https://henriquegogo.github.io/quiz/static/js/2.173bd393.chunk.js",
+    "static/js/2.173bd393.chunk.js.map": "https://henriquegogo.github.io/quiz/static/js/2.173bd393.chunk.js.map",
+    "index.html": "https://henriquegogo.github.io/quiz/index.html",
+    "precache-manifest.4bfc8cfedcc41d8b761ab35c73f2deb9.js": "https://henriquegogo.github.io/quiz/precache-manifest.4bfc8cfedcc41d8b761ab35c73f2deb9.js",
+    "service-worker.js": "https://henriquegogo.github.io/quiz/service-worker.js",
+    "static/css/main.16759802.chunk.css.map": "https://henriquegogo.github.io/quiz/static/css/main.16759802.chunk.css.map"
   }
 }
