@@ -121,7 +121,7 @@ class Trivia extends Component {
                 <span dangerouslySetInnerHTML={{ __html: option }} />
               </label>
             )}
-            <button type='submit' disabled={!selected_answer}>Responder</button>
+            <button type='submit' disabled={!selected_answer}>Send answer</button>
             {correct !== null && <Modal correct={correct} next={this.next} />}
           </form>
         </section>

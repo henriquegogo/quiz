@@ -21,6 +21,7 @@ class Report extends Component {
   }
   
   componentDidMount() {
+    window.scrollTo(0, 0);
     const { answers, category } = this.props;
 
     let new_state = answers.reduce((result, answer) => {
@@ -45,7 +46,6 @@ class Report extends Component {
     window.localStorage.setItem('category_' + category, JSON.stringify(new_state));
     this.setState(new_state);
   }
-
 
   render() {
     const {
