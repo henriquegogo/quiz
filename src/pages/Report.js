@@ -21,7 +21,9 @@ class Report extends Component {
   }
   
   componentDidMount() {
-    const new_state = this.props.answers.reduce((result, answer) => {
+    const { answers, category } = this.props;
+
+    let new_state = answers.reduce((result, answer) => {
       answer.correct ? result.total_hits++ : result.total_mistakes++;
       switch (answer.difficulty) {
         case EASY:
@@ -38,6 +40,9 @@ class Report extends Component {
       return result;
     }, { ...this.state });
 
+    const cached_answers = window.localStorage.getItem('category_' + category);
+    new_state = cached_answers ? JSON.parse(cached_answers) : new_state;
+    window.localStorage.setItem('category_' + category, JSON.stringify(new_state));
     this.setState(new_state);
   }
 
