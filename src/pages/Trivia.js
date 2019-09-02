@@ -10,7 +10,7 @@ const EASY = 'easy';
 const MEDIUM = 'medium';
 const HARD = 'hard';
 
-class Trivia extends Component {
+export class Trivia extends Component {
 
   state = {
     selected_answer: null,

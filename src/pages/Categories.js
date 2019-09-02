@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { categories } from '../actions/categories';
 
-class Categories extends Component {
+export class Categories extends Component {
 
   componentDidMount() {
     this.props.dispatch(categories());
