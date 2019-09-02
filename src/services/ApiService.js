@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API_BASE_URL = 'https://opentdb.com';
-const CATEGORIES_URL = `${API_BASE_URL}/api_category.php`;
-const QUESTION_URL = `${API_BASE_URL}/api.php?amount=10&difficulty={difficulty}&type=multiple&category={category}`;
+export const CATEGORIES_URL = `${API_BASE_URL}/api_category.php`;
+export const QUESTION_URL = `${API_BASE_URL}/api.php?amount=10&difficulty={difficulty}&type=multiple&category={category}`;
 
 export async function getCategories() {
   const resp =  await axios.get(CATEGORIES_URL);
